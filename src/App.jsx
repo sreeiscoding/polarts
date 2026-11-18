@@ -52,7 +52,7 @@ const footerNavigation = [
 function Brand({ compact = false }) {
   return (
     <a className={`brand ${compact ? 'brand--compact' : ''}`} href="#overview" aria-label="POLARTS home">
-      <img className="brand-mark" src="/logo/polarts-logo.jpeg" alt="" />
+      <img className="brand-mark" src={`${import.meta.env.BASE_URL}logo/polarts-logo.jpeg`} alt="" />
       <span className="brand-copy"><strong>POLARTS</strong><small>Department of Political Science</small></span>
     </a>
   )
@@ -130,7 +130,7 @@ function Hero({ onOpenModal, stageIndex, setStageIndex }) {
             <em className="panel-telemetry"><i />{stage.telemetry}</em>
           </div>
           <div className="panel-art">
-            <img src="/logo/polarts-logo-transparent.png" alt="" />
+            <img src={`${import.meta.env.BASE_URL}logo/polarts-logo-transparent.png`} alt="" />
           </div>
         </div>
         <button className="panel-event" type="button" onClick={() => onOpenModal('events')}>
@@ -1203,7 +1203,7 @@ function Participation() {
           </div>
           {couponView === 'artwork' ? (
             <div className="coupon-stage">
-              <img className="coupon-artwork-image" src="/logo/polarts-coupon.jpg" alt="Official POLARTS participation and lucky draw coupon, including the ₹20 entry, November 26–27 event dates, and ₹5,000 prize information." />
+              <img className="coupon-artwork-image" src={`${import.meta.env.BASE_URL}logo/polarts-coupon.jpg`} alt="Official POLARTS participation and lucky draw coupon, including the ₹20 entry, November 26–27 event dates, and ₹5,000 prize information." />
             </div>
           ) : (
             <div className={`coupon-upload-slot ${couponImage ? 'has-image' : ''}`}>
